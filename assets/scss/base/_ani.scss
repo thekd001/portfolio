@@ -1,0 +1,83 @@
+@for $i from 1 through 30 {
+	@keyframes particle-animation-#{$i} {
+		100% {
+			transform: translate3d((random(90) * 1vw), (random(90) * 1vh), (random(100) * 1px));
+		}
+	}
+	
+	.particle:nth-child(#{$i}){
+		animation: particle-animation-#{$i} 60s infinite;
+		$size: random(5) + 5 + px;
+		opacity: random(100)/100;
+		height: $size;
+		width: $size;
+		animation-delay: -$i * .2s;
+		transform: translate3d((random(90) * 1vw), (random(90) * 1vh), (random(100) * 1px));
+		background: #EBEBEB;
+	}
+}
+
+@keyframes marquee1{
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+@keyframes marquee2{
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(100%);
+    }
+}
+
+@keyframes light{
+    0%{
+        opacity: 0.8;
+        transform: scale(1,1);
+    }
+    50%{
+        opacity: 1;
+        transform: scale(0.8,0.8);
+    }
+    100%{
+        opacity: 0.8;
+        transform: scale(1,1);
+    }
+}
+@keyframes opacity{
+    0%{
+        opacity: 0.3;        
+    }
+    50%{
+        opacity: 0.8;        
+    }
+    100%{
+        opacity: 0.3;      
+    }
+}
+@keyframes rotate01{
+    0%{        
+        transform: rotateZ(0);
+    }
+    50%{
+        transform: rotateZ(-100deg);
+    }
+    100%{
+        transform: rotateZ(0);
+    }
+}
+@keyframes rotate02{
+    0%{        
+        transform: rotateZ(0);
+    }
+    50%{
+        transform: rotateZ(360deg);
+    }
+    100%{
+        transform: rotateZ(0);
+    }
+}

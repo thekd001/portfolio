@@ -1,0 +1,637 @@
+.title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    strong{
+        font-size: 24px;
+        line-height: 1.5;
+        @include mobile{
+            font-size: 18px;
+        }
+    }
+    h2{
+        font-size: clamp(30px,4vw,50px);
+        font-weight: 300;
+        line-height: 1.5;
+        text-align: center;
+    }
+    &.e-type{
+        h2{
+            font-family: 'Roslindale';
+            font-size: clamp(50px, 8vw, 105px);            
+            line-height: 1.3;
+        }
+    }
+    p{
+        color: #999;
+        font-size: 18px;
+        line-height: 1.8;
+        text-align: center;
+
+        @include mobile{
+            font-size: 16px;
+        }
+    }
+}
+.btn-common{
+    a{
+       display: inline-block;
+       .box{
+            pointer-events: none;
+            display: flex;
+            align-items: center;
+            padding: 9px 9px 9px 30px;
+            background: #ebebeb;
+            position: relative;
+            overflow: hidden;
+            border-radius: 50px;
+
+            @include mobile{
+                padding: 9px 9px 9px 20px;
+            }
+            &::before{
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 0;
+                background: #040506;
+                transition: height 0.3s;
+            }
+       }
+       .ic-velog{
+            position: relative;
+            z-index: 1;
+            margin-right: 20px;
+            
+            @include mobile{
+                margin-right: 10px;
+            }
+            img{
+                width: 40px;
+                transition: filter 0.3s;
+
+                @include mobile{
+                    width: 30px;
+                }
+            }
+       }
+       .text{
+            position: relative;
+            z-index: 1;
+            color: #040506;
+            font-size: 18px;
+            text-transform: uppercase;
+            transition: color 0.3s;
+
+            @include tablet{
+                font-size: 16px;
+            }
+            @include mobile{
+                font-size: 14px;
+            }
+       }
+       .ic-arrow{
+            position: relative;
+            z-index: 1;
+            margin-left: 30px;
+
+            @include tablet{
+                margin-left: 20px;
+            }
+            @include mobile{
+                margin-left: 10px;
+            }
+        img{
+            width: 45px;
+            transition: transform 0.3s;
+
+            @include mobile{
+                width: 35px;
+            }
+        }
+       }
+       &:hover{
+            .box{
+                &::before{
+                    height: 100%;
+                }
+            }
+            .ic-velog{
+                img{
+                    filter: invert(1);
+                }
+            }            
+            .text{
+                color: #fff;
+            }
+            .ic-arrow{
+                img{
+                    transform: rotate(90deg);
+                }
+            }
+        }
+    }
+}
+.container{
+    .particle-container{
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        .particle {
+            border-radius: 50%;
+        }
+    }
+    .sc-visual{
+        height: 100vh;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .title{
+            position: relative;
+            z-index: 5;
+            h2{
+                margin: 45px 0 60px;
+
+                @include tablet{
+                    margin: 30px 0 40px;
+                }
+                @include mobile{
+                    margin: 20px 0 30px;
+                }                
+            }
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle,#000,transparent);
+            z-index: 1;
+        }
+        &::after{
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            width: 100%;
+            height: 20vh;
+            background: linear-gradient(rgba(0,2,16,0),#000210 90%);
+            z-index: 1;
+        }
+        video{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .light-left{
+            position: absolute;
+            top: -70px;
+            left: -70px;            
+            img{
+                width: 621px;
+                animation: light 3s linear infinite;
+            }
+        }
+        .light-right{
+            position: absolute;
+            top: -70px;
+            right: -70px;
+            img{
+                width: 679px;
+                animation: light 3s linear infinite;
+            }
+        }
+    }
+    .sc-appear{
+        padding-top: 225px;
+        position: relative;
+
+        @include tablet{
+            padding-top: 150px;
+        }
+        @include mobile{
+            padding-top: 80px;
+            overflow: hidden;
+        }
+        .title{
+            position: relative;
+            overflow: hidden;
+            z-index: 5;
+            h2{
+                max-width: 930px;
+                @include tablet{
+                    text-align: left;
+                }
+            }
+            p{
+                margin: 45px 0 60px;
+                word-break: keep-all;
+
+                @include tablet{
+                    margin: 30px 0 50px;
+                    text-align: left;
+                }
+                @include mobile{
+                    margin: 25px 0 40px;
+                }
+            }
+        }
+        .bg-area{
+            position: absolute;
+            top: 190px;
+            left: 0;
+            right: 0;
+            max-width:1920px;
+            margin: 0 auto;
+            width: 100%;
+            overflow: hidden;
+
+            @include pc-1600{
+                top: 320px;
+            }
+            @include mobile{
+                overflow: visible;
+                top: 0;
+            }
+            .circle01{
+                position: relative;
+                width: 100%;
+                z-index: 3;
+                
+                @include mobile{
+                    display: none;
+                }
+            }
+            .bg-inner{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                .particle-container{
+                    @include pc-1920{
+                        top: 2.6042vw;
+                        left: 2.6042vw;
+                    }
+                    @include mobile{
+                        top: 50%;
+                        left: 50%;
+                    }
+                }                
+                .circle02{
+                    position: absolute;
+                    z-index: 2;
+                    width: 2000px;
+                    top: 384px;
+                    left: 0;
+                    animation: rotate01 5s linear infinite;
+
+                    @include pc-1920{
+                        width: 104.1667vw;
+                        top: 20.0000vw;
+                    }
+                    @include mobile{
+                        display: none;
+                    }
+                }
+                .circle03{
+                    position: absolute;
+                    z-index: 1;
+                    width: 1593px;
+                    top: 499px;
+                    left: 192px;
+                    animation: rotate02 12s linear infinite;
+
+                    @include pc-1920{
+                        width: 82.9688vw;
+                        top: 25.9896vw;
+                        left: 10.0000vw;
+                    }
+                    @include mobile{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    .sc-work{
+        position: relative;
+        z-index: 6;
+        margin-top: 295px;
+        padding-top: 50px;
+
+        @include tablet{
+            margin-top: 245px;            
+        }
+        @include mobile{
+            margin-top: 100px;
+        }
+        .title{
+            flex-direction: row;
+            justify-content: center;
+            gap: 45px;
+            
+            @include tablet{
+                flex-direction: column;
+                gap: 20px;
+            }
+            @include mobile{
+                gap: 10px;
+            }
+            p{
+                width: 402px;
+                text-align: left;
+                word-break: keep-all;
+
+                @include tablet{
+                    width: auto;
+                    text-align: center;
+                }
+            }
+        }
+        .work-list{
+            margin-top: 105px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            row-gap: 105px;
+
+            @include tablet{
+                margin-top: 75px;
+                row-gap: 75px;
+            }
+            @include mobile{
+                margin-top: 60px;
+                row-gap: 60px;
+            }
+            .work-item{
+                width: calc(50% - 13.5px);
+
+                @include tablet{
+                    width: calc(50% - 10px);
+                }
+                @include mobile{
+                    width: 100%;
+                }
+                a{
+                    display: flex;
+                    flex-direction: column;
+                    .img-area{
+                        position: relative;
+                        border-radius: 45px;
+                        margin-bottom: 45px;                        
+                        overflow: hidden;
+                        padding-top: 75.5%;
+
+                        @include tablet{
+                            border-radius: 30px;
+                            margin-bottom: 30px;
+                        }
+                       
+                        img{
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            filter: grayscale(100%);
+                            transition: filter 0.3s, transform 0.5s;
+                            &.top{
+                                object-position: top;
+                            }
+                        }
+                        &:hover{
+                            img{
+                                filter: grayscale(0);
+                                transform: scale(1.1);
+                            }
+                        }
+                    }
+                    .subject{
+                        display: flex;
+                        justify-content: space-between;
+                        margin-bottom: 30px;
+
+                        @include tablet{
+                            margin-bottom: 20px;
+                        }
+                        strong{
+                            text-transform: uppercase;
+                            font-size: 24px;
+                            line-height: 1.3;
+                            margin-right: 10px;
+                            
+                            @include tablet{
+                                font-size: 22px;
+                            }
+                            @include mobile{
+                                font-size: 20px;
+                            }
+                        }
+                        span{
+                            font-size: 24px;
+                            line-height: 1.3;
+
+                            @include tablet{
+                                font-size: 22px;
+                            }
+                            @include mobile{
+                                font-size: 20px;
+                            }
+                        }
+                    }
+                    .catagory{
+                        display: flex;
+                        align-items: center;
+                        flex-wrap: wrap;
+                        gap: 11px;
+                        
+                        @include tablet{
+                            gap: 9px;
+                        }
+                        li{
+                            border: 1px solid #333540;
+                            border-radius: 50px;
+                            padding: 7px 15px;
+                            font-size: 18px;
+                            color: #d9d9db;
+
+                            @include tablet{
+                                font-size: 16px;
+                            }
+                            @include mobile{
+                                font-size: 13px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .btn-common{
+            margin-top: 105px;
+            text-align: center;
+
+            @include mobile{
+                margin-top: 90px;
+            }
+            a{
+                display: inline-flex;
+            }
+        }
+    }
+    .sc-service{
+        margin-top: 225px;
+        overflow: hidden;
+
+        @include tablet{
+            margin-top: 200px;
+        }
+        @include mobile{
+            margin-top: 150px;
+        }
+        .title{
+            align-items: flex-start;
+            margin-bottom: 60px;
+
+            @include tablet{
+                margin-bottom: 50px;
+            }
+            @include mobile{
+                margin-bottom: 40px;
+            }
+            h2{
+                overflow: hidden;
+            }
+        }
+        .marquee-area{
+            display: flex;
+            &.row{
+               .portfolio-list{
+                    animation: marquee1 20s linear infinite;
+               } 
+            }
+            &.reverse{
+                margin-top: 40px;
+                justify-content: flex-end;
+
+                @include mobile{
+                    margin-top: 30px;
+                }
+                .portfolio-list{
+                    animation: marquee2 20s linear infinite;
+                }                 
+            }
+            .marquee-inner{
+                display: flex;
+            }
+        }
+        .portfolio-list{
+            display: flex;            
+            .portfolio-item{
+                padding: 0 20px;
+
+                @include tablet{
+                    padding: 0 10px;
+                }              
+                a{
+                    display: flex;
+                    flex-direction: column;
+                    width: 360px;                    
+                    background-color: rgba(217,217,217,.11);
+                    border: 1px solid rgba(255,255,255,.3);
+                    border-radius: 30px;
+                    padding: 30px 23px;
+
+                    @include tablet{
+                        width: 280px;
+                        border-radius: 20px;
+                        padding: 20px 18px;
+                    }
+                    @include mobile{
+                        width: 220px;
+                        border-radius: 15px;
+                        padding: 15px;
+                    }
+                    .img-area{                        
+                        position: relative;
+                        padding-top: 89.42%;
+                        border-radius: 18px;
+                        margin-bottom: 18px;
+                        overflow: hidden;
+
+                        @include tablet{
+                            border-radius: 15px;
+                            margin-bottom: 15px;
+                        }
+                        @include mobile{
+                            border-radius: 10px;
+                        }
+                        .pf-label{
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            border-radius: 5px;
+                            background: rgba(0,0,0,0.5);
+                            padding: 10px;
+                            font-size: 18px;
+                            line-height: 1.3;
+
+                            @include tablet{
+                                font-size: 16px;
+                            }
+                            @include mobile{
+                                padding: 8px;
+                                font-size: 14px;
+                            }
+                        }
+                        img{
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                    strong{
+                        color: #ebebeb;
+                        font-size: 24px;
+                        line-height: 1.3;
+                        margin-bottom: 13px;
+                        word-break: keep-all;
+
+                        @include tablet{
+                            font-size: 22px;
+                        }
+                        @include mobile{
+                            font-size: 20px;
+                            margin-bottom: 10px;
+                        }
+                    }
+                    p{
+                        color: #d9d9db;
+                        font-size: 16px;
+                        line-height: 1.5;
+                        word-break: keep-all;
+
+                        @include tablet{
+                            font-size: 15px;
+                        }
+                        @include mobile{
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

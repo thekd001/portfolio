@@ -1,0 +1,46 @@
+@font-face {
+    src: url('../fonts/Roslindale-DisplayCondensedRegular-Testing.woff2') format("woff2"),
+         url('../fonts/Roslindale-DisplayCondensedRegular-Testing.woff') format("woff");
+    font-family: 'Roslindale';
+    font-style: normal;
+    font-weight: normal;
+  }
+  @font-face {
+     src: url('../fonts/Roslindale-DisplayCondensedLight-Testing.woff2') format("woff2"),
+          url('../fonts/Roslindale-DisplayCondensedLight-Testing.woff') format("woff");
+     font-family: 'Roslindale';
+     font-style: normal;
+     font-weight: 300;
+   }
+  @font-face {
+    src: url('../fonts/AeonikProTRIAL-Regular.woff2') format("woff2"),
+         url('../fonts/AeonikProTRIAL-Regular.woff') format("woff");
+    font-family: 'Aeonik Pro';
+    font-style: normal;
+    font-weight: normal;
+  }  
+  @font-face {
+     font-family: "Pretendard";
+     src: url('../fonts/Pretendard-Light.woff') format('woff');
+     font-weight: 300;
+  }
+  @font-face {
+     font-family: "Pretendard";
+     src: url('../fonts/Pretendard-Regular.woff') format('woff');
+     font-weight: 400;
+  }
+  @font-face {
+     font-family: "Pretendard";
+     src: url('../fonts/Pretendard-Medium.woff') format('woff');
+     font-weight: 500;
+  }
+  @font-face {
+     font-family: "Pretendard";
+     src: url('../fonts/Pretendard-SemiBold.woff') format('woff');
+     font-weight: 600;
+  }
+  @font-face {
+     font-family: "Pretendard";
+     src: url('../fonts/Pretendard-Bold.woff') format('woff');
+     font-weight: 700;
+  }
